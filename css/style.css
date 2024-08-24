@@ -380,6 +380,10 @@ nav a:hover {
     justify-content: space-around;
     flex-wrap: wrap;
 }
+.contact-info p:last-of-type {
+    margin-top: 60px; /* Ajusta el margen superior según sea necesario */
+    margin-left: -100px;
+}
 
 form {
     flex: 1;
@@ -817,9 +821,13 @@ footer {
 }
 
 /* Sección "Servicios" */
+/* ... otros estilos ... */
+
+/* Sección "Servicios" */
 #services {
     padding: 80px 0;
 }
+
 #services-hero {
     background-color: #f5f5f5;
     padding: 100px 0;
@@ -831,20 +839,52 @@ footer {
     justify-content: center;
     gap: 20px;
 }
-.services-grid .service .button-container {
-    margin-top: auto;  /* Empuja el botón hacia abajo */
-    display: flex;      /* Usamos flexbox para centrar */
-    justify-content: center; /* Centramos horizontalmente */
-    align-items: flex-end;  /* Alineamos el botón en la parte inferior */
+
+/* Estilos para las tarjetas de servicio */
+.services-grid .service-card {
+    text-align: center; /* Centra todo el contenido de la tarjeta */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    flex: 1 0 200px;
+    display: flex;
+    flex-direction: column;
+    min-height: 350px;
 }
 
-.service {
-    /* ... otros estilos ... */
-    flex: 1 0 200px; /* Ancho mínimo de 200px */
-   /* max-width: calc(25% - 20px); /* Ancho máximo para 4 cards en una fila */
+.services-grid .service-card:hover {
+    transform: translateY(-5px);
 }
+
+.services-grid .service-card img {
+    max-width: 100px;
+    margin: 0 auto 20px;
+}
+
+.services-grid .service-card h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.services-grid .service-card p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+/* Nuevo estilo para el contenedor del botón */
+.service-button {
+    margin-top: auto; /* Empuja el botón hacia abajo */
+    display: flex;
+    justify-content: center; /* Centra el botón horizontalmente */
+}
+
+.services-grid .service-card .btn {
+    /* Puedes añadir estilos adicionales para los botones si es necesario */
+}
+
 /* ... otros estilos ... */
-
 .service img {
     max-width: 100px;
     margin-bottom: 20px;

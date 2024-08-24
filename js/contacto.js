@@ -8,7 +8,7 @@ form.addEventListener('submit', (event) => {
     const email = document.getElementById('email').value;
     const message = document.getElementById('message').value;
 
-    // Validación básica del lado del cliente
+    // Validación del lado del cliente
     if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
         alert('Por favor, completa todos los campos.');
         return; // Detener el envío si hay campos vacíos
