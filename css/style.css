@@ -162,7 +162,7 @@ nav a:hover {
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Máximo 3 columnas, ancho mínimo de 300px */
-    gap: 40px;
+   /* gap: 40px;*/
 }
 
 .service {
