@@ -906,7 +906,11 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+<<<<<<< HEAD
     /*gap: 20px;*/
+=======
+    gap: 40px;
+>>>>>>> 8786afa0a0dd45327e3b5a15ea410ce4138781f7
 }
 
 /* Estilos para las tarjetas de servicio */
