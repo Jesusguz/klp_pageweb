@@ -817,6 +817,10 @@ footer {
     position: relative; /* Para colocar el contenido encima del filtro */
     z-index: 1; /* Asegura que el contenido esté por encima del filtro */
 }
+.hero-content a {
+    color: white;
+    
+  }
 
 #hero h1 {
     font-size: 3.5em;
