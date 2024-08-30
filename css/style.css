@@ -272,6 +272,7 @@ nav a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    gap: 40px;
 }
 .service {
     flex: 1 0 auto;
