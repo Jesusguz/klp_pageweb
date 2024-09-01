@@ -1,47 +1,60 @@
 const form = document.getElementById('contact-form');
 
 form.addEventListener('submit', (event) => {
-    event.preventDefault(); // Evitar que el formulario se envíe de forma tradicional
+    event.preventDefault();
 
-    // Obtener los valores del formulario
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const message = document.getElementById('message').value;
 
-    // Validación del lado del cliente
-    if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
-        alert('Por favor, completa todos los campos.');
-        return; // Detener el envío si hay campos vacíos
+    // Validaciones mejoradas
+    if (!validarCampos(name, email, message)) {
+        return;
     }
 
-    // Puedes agregar validaciones más avanzadas aquí, como verificar el formato del correo electrónico
+    // Enviar datos al backend (fetch)
+    const data = { name, email, message };
 
-    // Enviar los datos al backend usando AJAX (fetch)
-    const data = {
-        name: name,
-        email: email,
-        message: message
-    };
-
-    fetch('controller/send-email', { // Reemplaza '/send-email' con la ruta correcta de tu backend
+    fetch('controller/send-email', { 
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(data)
     })
-        .then(response => {
-            if (response.ok) {
-                // Mostrar mensaje de éxito
-                alert('¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.');
-                form.reset(); // Limpiar el formulario
-            } else {
-                // Manejar errores
-                alert('Hubo un problema al enviar tu mensaje. Por favor, inténtalo de nuevo más tarde.');
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
+    .then(response => {
+        if (response.ok) {
+            alert('¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.');
+            form.reset();
+        } else {
             alert('Hubo un problema al enviar tu mensaje. Por favor, inténtalo de nuevo más tarde.');
-        });
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Hubo un problema al enviar tu mensaje. Por favor, inténtalo de nuevo más tarde.');
+    });
 });
+
+function validarCampos(name, email, message) {
+    // Validar campos vacíos
+    if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
+        alert('Por favor, completa todos los campos.');
+        return false;
+    }
+
+    // Validar formato de correo electrónico (expresión regular más robusta)
+    const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (!emailRegex.test(email)) {
+        alert('Por favor, introduce un correo electrónico válido.');
+        return false;
+    }
+
+    // Sanitización básica para prevenir inyección de código (puedes usar una librería especializada si es necesario)
+    const sanitizedName = name.replace(/<[^>]*>/g, ''); // Elimina etiquetas HTML
+    const sanitizedMessage = message.replace(/<[^>]*>/g, '');
+
+    // Validaciones adicionales según tus necesidades (longitud máxima, caracteres permitidos, etc.)
+
+    return true;
+}

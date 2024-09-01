@@ -1,33 +1,34 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Obtener los datos del formulario
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $message = $_POST['message'];
-
-    // Validaciones (puedes agregar más según tus necesidades)
-    if (empty($name) || empty($email) || empty($message)) {
-        echo json_encode(array('success' => false, 'message' => 'Por favor, completa todos los campos.'));
+    $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING); // Sanitización básica
+    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+    $message = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
+     // Prevención de spam 
+    if (!empty($_POST['website'])) { // 'website' es el nombre del campo oculto
+        echo json_encode(array('success' => false, 'message' => 'Solicitud sospechosa. Por favor, inténtalo de nuevo.'));
         exit;
     }
 
-    // Prevención de spam (puedes agregar más medidas aquí)
-    // ... (Por ejemplo, puedes usar un captcha o un servicio de terceros para validar el envío)
+    // Validaciones mejoradas (usa una librería para una validación de correo electrónico más robusta)
+    if (empty($name) || empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL) || empty($message)) {
+        echo json_encode(array('success' => false, 'message' => 'Por favor, completa todos los campos correctamente.'));
+        exit;
+    }
 
-    // Configuración del correo electrónico
-    $to = "contacto@kplhuman.com.mx"; // Reemplaza con el correo de la empresa
+
+
+    $to = "contacto@kplhuman.com.mx";
     $subject = "Nuevo mensaje de contacto desde el sitio web";
-    $body = "Nombre: $name\n";
-    $body .= "Correo electrónico: $email\n";
-    $body .= "Mensaje: $message\n";
-    $headers = "From: $email\n"; // El correo se enviará desde la dirección del usuario
-    $headers .= "Reply-To: $email\n"; // Permite responder directamente al usuario
+    $body = "Nombre: $name\nCorreo electrónico: $email\nMensaje: $message\n";
+    $headers = "From: $email\nReply-To: $email\n";
 
-    // Enviar el correo electrónico
-    if (mail($to, $subject, $body, $headers)) {
+    // Enviar el correo electrónico con manejo de errores
+    if (@mail($to, $subject, $body, $headers)) {
         echo json_encode(array('success' => true, 'message' => '¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.'));
     } else {
-        echo json_encode(array('success' => false, 'message' => 'Hubo un problema al enviar tu mensaje. Por favor, inténtalo de nuevo más tarde.'));
+        // Registra el error en un log para depuración
+        error_log("Error al enviar el correo electrónico: " . error_get_last()['message']);
+        echo json_encode(array('success' => false, 'message' => 'Error al enviar el mensaje. Por favor, inténtalo de nuevo más tarde o contacta al administrador.'));
     }
 } else {
     echo json_encode(array('success' => false, 'message' => 'Método de solicitud no válido.'));

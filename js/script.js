@@ -1,4 +1,4 @@
-// Ejemplo de función para mejorar la navegación (smooth scrolling)
+
 document.querySelectorAll('a[href^="#"]:not(nav ul li a)').forEach(anchor  => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();

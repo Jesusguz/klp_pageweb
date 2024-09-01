@@ -23,7 +23,8 @@ body {
     padding: 0 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
+    justify-content:space-evenly;
 }
 
 /* Header y navegación */
@@ -63,6 +64,9 @@ nav li {
 
     .menu-toggle {
         display: block;
+        align-self: auto;
+        margin-right: 15px;
+
         /* ... otros estilos para el botón ... */
     }
 
@@ -389,7 +393,7 @@ nav a:hover {
 }
 .contact-info p:last-of-type {
     margin-top: 60px; /* Ajusta el margen superior según sea necesario */
-    margin-left: 0px;
+    margin-left: -100px;
 }
 
 form {
@@ -442,11 +446,39 @@ textarea {
     margin-bottom: 15px;
 }
 
+#iframe-container {
+    display: none; /* Inicialmente oculto */
+    position: fixed; /* Lo posicionamos de forma fija */
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 90%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente opcional */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  }
+  
+  #google-iframe {
+    width: 90%;
+    height: 90%;
+    border: none; /* Elimina el borde del iframe */
+  }
+  
+  #close-button {
+    align-self: flex-end;
+    /*position: absolute;*/
+    top: 10px;
+    right: 10px;
+    padding: 10px 15px;
+    background-color: var(--primary);
+    color:var(--neutral-light);
+    border: none;
+    cursor: pointer;
+  }
 /* ... (resto de los estilos existentes) ... */
 
 /* Sección Content */
 #content {
-    padding: 30px 0;
+    /*padding: 30px 0;*/
 }
 
 #content .container {
@@ -456,11 +488,13 @@ textarea {
 }
 
 #content h2 {
+    margin-bottom: 10px;
     color: var(--primary);
     margin-bottom: 30px;
 }
 
 #content p {
+    margin-top: -10px;
     line-height: 1.8;
     margin-bottom: 20px;
     max-width: 800px; /* Limita el ancho del párrafo para mejorar la legibilidad */
@@ -480,6 +514,7 @@ textarea {
 
 .featured-content h3,
 .value-proposition h3 {
+    argin-top: 0px;
     color: var(--primary);
     margin-bottom: 20px;
 }
@@ -498,15 +533,16 @@ textarea {
     background-color: #25d366; /* Color verde de WhatsApp */
     color: white;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 50px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil */
     z-index: 999; /* Asegúrate de que esté por encima de otros elementos */
 }
 .whatsapp-button .tooltiptext {
+    font-size: 16px;
     right: 20px;
     visibility: hidden;
     width: 120px; /* Ajusta el ancho según sea necesario */
-    background-color: black;
+    background-color:var(--primary);
     color: #fff;
     text-align: center;
     border-radius: 6px;
@@ -814,10 +850,11 @@ footer {
     content: '';
     position: absolute;
     top: 0;
-    left: 0;
+    left: px;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad según sea necesario */
+    
 }
 
 .hero-content {
