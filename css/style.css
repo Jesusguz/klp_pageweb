@@ -129,14 +129,14 @@ nav a:hover {
     justify-content: center; /* Centra horizontalmente */
     align-items: center; 
     background-color: #f5f5f5;
-    padding: 100px 0;
+    padding: 85px 0;
     text-align: center;
-    padding-bottom: 30px;
+    padding-bottom: 0px;
 }
 
 #about-hero h1 {
     color: var(--primary); /* Asegúrate de definir esta variable en tu CSS */
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 
 /* Sección "About Content" */
@@ -165,6 +165,9 @@ nav a:hover {
 .about-section h3 {
     color: var(--primary);
     margin-bottom: 15px;
+}
+.about-section p {
+    text-align: justify;
 }
 /* Sección "Servicios" */
 .services-grid {
@@ -237,7 +240,7 @@ nav a:hover {
 .hero-content p {
     font-size: 18px;
     line-height: 1.6;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 
 /* Estilos para el botón "Más información" */
@@ -273,7 +276,7 @@ nav a:hover {
     color: black;
     font-size: 18px;
     line-height: 1.6;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 /* Estilos para la grilla de servicios */
 .services-grid {
@@ -297,11 +300,13 @@ nav a:hover {
     margin-bottom: 20px;
 }
 .service h3 {
-    font-size: 24px;
+    margin-top: 0%;
+    font-size: 20px;
     margin-bottom: 10px;
 }
 
 .service p {
+   
     line-height: 1.6;
     margin-bottom: 20px;
 }
@@ -943,14 +948,17 @@ footer {
     align-items: center; 
     background-color: #f5f5f5;
     padding: 80px 0;
-    padding-bottom: 30px;
+    padding-bottom: 1%;
     text-align: center;
 }
 #services-hero h1 { /* Selector específico para el h1 dentro de #services-hero */
     color: var(--primary);/* Cambia el color a azul (puedes usar cualquier color o variable CSS) */
 }
-
+#services-hero p { /* Selector específico para el h1 dentro de #services-hero */
+    
+}
 .services-grid {
+
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -963,6 +971,8 @@ footer {
 
 /* Estilos para las tarjetas de servicio */
 .services-grid .service-card {
+    margin-top: 2%;
+    margin-bottom: 2%;
     text-align: center; /* Centra todo el contenido de la tarjeta */
     padding: 30px;
     border-radius: 10px;
@@ -989,8 +999,10 @@ footer {
 }
 
 .services-grid .service-card p {
+    margin-top: 2%;
+    text-align: justify;
     line-height: 1.6;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     flex-grow: 1;
 }
 

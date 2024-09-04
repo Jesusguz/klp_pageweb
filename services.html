@@ -46,28 +46,28 @@
             <div class="services-grid">
                 <div class="service service-card">
                     <h3>Consultoría en Recursos Humanos</h3>
-                    <p>Ofrecemos consultoría integral en recursos humanos para optimizar el desempeño y la gestión del talento en tu empresa. Nuestro equipo de expertos brinda soluciones personalizadas para ayudarte a construir un entorno laboral eficiente y motivador que impulse el éxito empresarial.</p>
+                    <p>Ofrecemos consultoría integral en recursos humanos para optimizar el desempeño y la gestión del talento en tu empresa. <br>Nuestro equipo de expertos brinda soluciones personalizadas para ayudarte a construir un entorno laboral eficiente y motivador que impulse el éxito empresarial.</p>
                     <div class="service-button"> <a href="servicios/consultoria.html" class="btn secondary">Más información</a> </div>
                 </div>
 
                 <div class="service service-card">
                     <h3>Cursos Empresariales</h3>
-                    <p>Impulsa el crecimiento y bienestar de tu equipo con nuestros cursos empresariales especializados en psicología y desarrollo. Ofrecemos programas diseñados para mejorar habilidades de comunicación, liderazgo, trabajo en equipo, etc. Capacita a tu personal con herramientas prácticas y estrategias efectivas que fortalecerán su desempeño y contribuirán al éxito de tu empresa. </p>
+                    <p><br>Impulsa el crecimiento y bienestar de tu equipo con nuestros cursos empresariales especializados en psicología y desarrollo. <br>Ofrecemos programas diseñados para mejorar habilidades de comunicación, liderazgo, trabajo en equipo, etc. <br>Capacita a tu personal con herramientas prácticas y estrategias efectivas que fortalecerán su desempeño y contribuirán al éxito de tu empresa. </p>
                     <div class="service-button"> <a href="servicios/cursos-empresariales.html" class="btn secondary">Más información</a> </div>
                 </div>
                 <div class="service service-card">
                     <h3>Cursos Personales</h3>
-                    <p>Ofrecemos cursos personalizados en psicología y desarrollo personal diseñados para ayudarte a alcanzar tu máximo potencial. Nuestros programas abarcan una variedad de temas, desde el autoconocimiento y la gestión del estrés hasta habilidades de comunicación y crecimiento emocional.</p>
+                    <p><br>Ofrecemos cursos personalizados en psicología y desarrollo personal diseñados para ayudarte a alcanzar tu máximo potencial. <br>Nuestros programas abarcan una variedad de temas, desde el autoconocimiento y la gestión del estrés hasta habilidades de comunicación y crecimiento emocional.</p>
                     <div class="service-button"> <a href="servicios/cursos-personales.html" class="btn secondary">Más información</a> </div>
                 </div>
                 <div class="service service-card">
                     <h3>Reclutamiento Especializado</h3>
-                    <p>Nos especializamos en encontrar y atraer a los mejores talentos para tu empresa. Utilizamos técnicas avanzadas para identificar candidatos cualificados que se ajusten a tus necesidades y cultura organizacional, un valor agregado es que asignamos a tus vacantes a reclutadores expertos en el giro de tu empresa.</p>
+                    <p>Nos especializamos en encontrar y atraer a los mejores talentos para tu empresa.<br> Utilizamos técnicas avanzadas para identificar candidatos cualificados que se ajusten a tus necesidades y cultura organizacional, un valor agregado es que asignamos a tus vacantes a reclutadores expertos en el giro de tu empresa.</p>
                     <div class="service-button"> <a href="https://wa.me/5215555010689" target="_blank" class="btn secondary">Más información</a> </div>
                 </div>
                 <div class="service service-card">
                     <h3>Terapia Psicológica</h3>
-                    <p>Nuestra terapia psicológica profesional te ayudará a superar desafíos emocionales. Nuestros terapeutas están capacitados para proporcionar apoyo personalizado en áreas como manejo del estrés, ansiedad, depresión y desarrollo personal, a través de un enfoque empático y confidencial, trabajamos contigo para promover tu bienestar y mejorar tu calidad de vida.</p>
+                    <p>Nuestra terapia psicológica profesional te ayudará a superar desafíos emocionales. <br>Nuestros terapeutas están capacitados para proporcionar apoyo personalizado en áreas como manejo del estrés, ansiedad, depresión y desarrollo personal. <br>Con un enfoque empático y confidencial, trabajamos contigo para promover tu bienestar y mejorar tu calidad de vida.</p>
                     <div class="service-button"> <a href="https://wa.me/5215555010689" target="_blank" class="btn secondary">Más información</a> </div>
                 </div>
             </div>
@@ -81,17 +81,17 @@
             <div class="contact-info">
                 <h3>Contáctanos</h3>
                 <p>
-                    <i class="fas fa-envelope"></i> Email: contacto@kplhuman.com
+                    <i class="fas fa-envelope"></i>contacto@klphuman.com.mx
                 </p>
             </div>
-            <div class="social-media">
+            <div class="social-media" >
                 <h3>Síguenos</h3>
                 <ul>
-                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                    <li style="display: none;"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://www.linkedin.com/company/klp-human-sa" target="_blank"><i class="fab fa-linkedin"></i></a></li>
                 </ul>
             </div>
-            <div class="quick-links">
+            <div class="quick-links" style="display:none;">
                 <h3>Enlaces Rápidos</h3>
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
@@ -102,10 +102,37 @@
             </div>
         </div>
         <div class="copyright">
-            <p>Copyright © 2024 KPL HUMAN | <a href="#">Aviso de privacidad</a></p>
-        </div>
+            <p>Copyright © 2024 KLP HUMAN | <a href="#">Aviso de privacidad</a></p>
+          </div>
+          
+          <div id="iframe-container" style="display: none;"> 
+            <iframe id="google-iframe" src="" width="100%" height="600px"></iframe>
+            <button id="close-button">Cerrar</button>
+          </div>
+          
     </div>
 </footer>
+<script>
+    const copyrightDiv = document.querySelector('.copyright');
+    const iframeContainer = document.getElementById('iframe-container');
+    const googleIframe = document.getElementById('google-iframe');
+    const closeButton = document.getElementById('close-button');
+    
+    copyrightDiv.addEventListener('click', () => {
+      // Ruta local al PDF
+      const pdfUrl = 'assets/pdf/AVISO DE PRIVACIDAD_KLP HUMAN (1).pdf'; 
+    
+      googleIframe.src = pdfUrl;
+      iframeContainer.style.display = 'flex'; 
+  iframeContainer.style.alignItems = 'center'; 
+  iframeContainer.style.justifyContent = 'center'; 
+    });
+    
+    closeButton.addEventListener('click', () => {
+      googleIframe.src = ''; 
+      iframeContainer.style.display = 'none';
+    });
+</script>
 
 <script src="js/script.js"></script>
 <a href="https://wa.me/5215555010689" class="whatsapp-button" target="_blank"  title="Chatea con nosotros" alt="KPL HUMAN Logo">
