@@ -264,15 +264,17 @@ nav a:hover {
     padding: 80px 0;
     text-align: center;
     margin-bottom: 10px;
+    padding-bottom: 0%;
 }
 
 
 .hero-content h1 {
     color: var(--primary);
     font-size: 36px;
-    margin-bottom: 20px;
+    margin-bottom: 0%;
 }
 .hero-content p {
+    margin-top: 0%;
     color: black;
     font-size: 18px;
     line-height: 1.6;
@@ -904,7 +906,7 @@ footer {
 }
 
 .btn.secondary:hover {
-    background-color: var(--secondary-2);
+    background-color: var(--secondary-3);
 }
 
 /* Sección "Sobre Nosotros" */
@@ -958,7 +960,8 @@ footer {
     
 }
 .services-grid {
-
+    padding-top: 2%;
+    padding-bottom: 2%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

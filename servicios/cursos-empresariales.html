@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cursos Empresariales - KPL HUMAN</title>
+    <title>Cursos Empresariales - KLP HUMAN</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -14,7 +14,7 @@
         <div class="container">  
 
             <a href="../index.html" class="logo">
-                <img src="../assets/images/logo2.png" alt="KPL HUMAN Logo">
+                <img src="../assets/images/logo2.png" alt="KLP HUMAN Logo">
             </a>
 
             <div class="menu-toggle">
@@ -72,13 +72,9 @@
                 <div class="service">
                     <img src="https://i.postimg.cc/wB5x70q7/comunicacion-efectiva.jpg" alt="Comunicación Efectiva">
                     <h3>Comunicación Efectiva</h3>
-                    <p>Aprende a comunicar de manera clara y persuasiva, expresando tus ideas con precisión y escuchando activamente.</p>
+                    <p><br>Aprende a comunicar de manera clara y persuasiva, expresando tus ideas con precisión y escuchando activamente.</p>
                 </div>
-                <div class="service">
-                    <h3>¿Listo para transformar tu organización?</h3>
-                    <p>¡Contáctanos hoy mismo!</p>
-                    <a href="../contact.html" class="btn primary">Contáctanos</a>
-                </div>
+               
             </div>
         </div>
     </section>
@@ -89,33 +85,60 @@
             <div class="contact-info">
                 <h3>Contáctanos</h3>
                 <p>
-                    <i class="fas fa-envelope"></i> Email: contacto@kplhuman.com
+                    <i class="fas fa-envelope"></i>contacto@klphuman.com.mx
                 </p>
             </div>
-            <div class="social-media">
+            <div class="social-media" >
                 <h3>Síguenos</h3>
                 <ul>
-                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                    <li style="display: none;"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://www.linkedin.com/company/klp-human-sa" target="_blank"><i class="fab fa-linkedin"></i></a></li>
                 </ul>
             </div>
-            <div class="quick-links">
+            <div class="quick-links" style="display:none;">
                 <h3>Enlaces Rápidos</h3>
                 <ul>
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="../about.html">¿Quiénes somos?</a></li>
-                    <li><a href="../services.html">Servicios</a></li>
-                    <li><a href="../contact.html">Contacto</a></li>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="about.html">¿Quiénes somos?</a></li>
+                    <li><a href="services.html">Servicios</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
                 </ul>
             </div>
         </div>
         <div class="copyright">
-            <p>Copyright © 2024 KPL HUMAN | <a href="#">Aviso de privacidad</a></p>
-        </div>
+            <p>Copyright © 2024 KLP HUMAN | <a href="#">Aviso de privacidad</a></p>
+          </div>
+          
+          <div id="iframe-container" style="display: none;"> 
+            <iframe id="google-iframe" src="" width="100%" height="600px"></iframe>
+            <button id="close-button">Cerrar</button>
+          </div>
+          
     </div>
 </footer>
+<script>
+    const copyrightDiv = document.querySelector('.copyright');
+    const iframeContainer = document.getElementById('iframe-container');
+    const googleIframe = document.getElementById('google-iframe');
+    const closeButton = document.getElementById('close-button');
+    
+    copyrightDiv.addEventListener('click', () => {
+      // Ruta local al PDF
+      const pdfUrl = 'assets/pdf/AVISO DE PRIVACIDAD_KLP HUMAN (1).pdf'; 
+    
+      googleIframe.src = pdfUrl;
+      iframeContainer.style.display = 'flex'; 
+  iframeContainer.style.alignItems = 'center'; 
+  iframeContainer.style.justifyContent = 'center'; 
+    });
+    
+    closeButton.addEventListener('click', () => {
+      googleIframe.src = ''; 
+      iframeContainer.style.display = 'none';
+    });
+</script>
 <script src="../js/script.js"></script>
-<a href="https://wa.me/5215555010689" class="whatsapp-button" target="_blank"  title="Chatea con nosotros" alt="KPL HUMAN Logo">
+<a href="https://wa.me/5215555010689" class="whatsapp-button" target="_blank"  title="Chatea con nosotros" alt="KLPL HUMAN Logo">
     <i class="fab fa-whatsapp"></i>
     <span class="tooltiptext">Chatea con nosotros</span>
 </a>
