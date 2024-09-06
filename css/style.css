@@ -394,7 +394,7 @@ nav a:hover {
     display: flex;
     flex-wrap: wrap; /* Permitimos que los elementos se ajusten en varias líneas si es necesario */
 }
-.contact-info, .contact-image, .contact-details {
+.contact-image, .contact-details {
     flex: 0 1 auto; 
     margin: 30px; 
     box-sizing: border-box; 
@@ -407,12 +407,6 @@ nav a:hover {
     margin-bottom: 60%;
 }
 
-.contact-info {
-    padding-bottom: 40%;
-    flex: 1;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
 .contact-image img {
     max-width: 100%;
     height: auto;
@@ -431,19 +425,13 @@ nav a:hover {
 }
 
 /* Esta regla puede eliminarse si no es necesaria en tu diseño */
-.contact-info p:last-of-type {
-    margin-top: 60px; 
-    margin-left: -100px; 
-}
+
 
 /* El resto de las reglas para estilos del formulario (.form-group) pueden mantenerse */
 .form-group {
     margin-bottom: 20px;
 }
-.contact-info p:last-of-type {
-    margin-top: 60px; /* Ajusta el margen superior según sea necesario */
-    margin-left: -100px;
-}
+
 
 form {
     margin-bottom: 30%;
@@ -651,43 +639,72 @@ textarea {
     text-align: left; /* Alinea el texto de la lista a la izquierda */
 }
 /* Estilos generales para el footer */
-footer {
+:footer {
+    margin: 0 auto; 
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 200px;
     background-color: #f0f0f0;
     padding: 20px 0;
     color: #333;
+    min-height: 200px; 
+    flex-direction: column; 
 }
 
-.footer-content {
+.footer-container {
+    min-height: 200px; 
+    justify-content: center;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
-    flex-wrap: wrap; /* Permite que las secciones se ajusten en pantallas pequeñas */
-    justify-content: space-between; /* Distribuye las secciones con espacio entre ellas */
-    align-items: flex-start; /* Alinea las secciones a la parte superior */
-    max-width: 1200px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
     margin: 0 auto;
+    flex-grow: 1; 
 }
 
-.footer-content > div {
-    flex: 0 0 auto; /* Las secciones no crecerán más allá de su contenido */
-    margin: 0 20px;
+.footer-columns {  
+    justify-content: space-evenly;
+    flex-direction: row;
+    min-height: 200px;   
+     display: flex; 
+    align-items: flex-start; 
+
+    align-items: center;
+}
+
+.footer-container > div {
+    flex: 1; /* Permite que los elementos ocupen el espacio disponible de manera equitativa */
+    margin: 0 20px; 
 }
 
 .footer-content h3 {
-    color: var(--primary); /* Color principal (asegúrate de tenerlo definido) */
-    margin-bottom: 15px;
+    color: var(--primary); 
+  
+    font-size: 1.2rem; 
+    line-height: 1.4;
 }
 
+/* ... (resto del código CSS sin cambios) ... */
+
 .footer-content p {
+    align-items: center;
     line-height: 1.6;
 }
 
 .contact-info i {
-    margin-right: 10px;
+   /* margin-right: 10px;*/
 }
 
+.contact-info h3 {
+     margin-right: 10px;
+ }
+ 
 .social-media ul {
     list-style: none;
-    padding: 0;
-    display: flex;
+   /* padding: 0;
+    display: flex;*/
 }
 
 .social-media li {
@@ -722,8 +739,8 @@ footer {
 
 .copyright {
     text-align: center;
-    margin-top: 30px;
-    border-top: 1px solid #ddd;
+    margin-top: 50px;
+   /* border-top: 1px solid #ddd;*/
     padding-top: 20px;
     font-size: 0.9em;
 }
