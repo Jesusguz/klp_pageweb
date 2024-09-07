@@ -308,7 +308,7 @@ nav a:hover {
 }
 
 .service p {
-   
+    text-align: justify;
     line-height: 1.6;
     margin-bottom: 20px;
 }
@@ -531,7 +531,7 @@ textarea {
 .featured-content,
 .value-proposition {
     background-color: var(--neutral-light);
-    padding: 30px;
+    padding: 10px;
     border-radius: 10px;
     margin-bottom: 30px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -542,7 +542,7 @@ textarea {
 
 .featured-content h3,
 .value-proposition h3 {
-    argin-top: 0px;
+    margin-top: 0px;
     color: var(--primary);
     margin-bottom: 20px;
 }
@@ -665,7 +665,7 @@ textarea {
 }
 
 .footer-columns {  
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-direction: row;
     min-height: 200px;   
      display: flex; 
@@ -681,7 +681,7 @@ textarea {
 
 .footer-content h3 {
     color: var(--primary); 
-  
+  padding-bottom: 0%;
     font-size: 1.2rem; 
     line-height: 1.4;
 }
@@ -694,6 +694,7 @@ textarea {
 }
 
 .contact-info i {
+    margin-right: 15px;
    /* margin-right: 10px;*/
 }
 
@@ -1007,7 +1008,7 @@ textarea {
     color: var(--primary);/* Cambia el color a azul (puedes usar cualquier color o variable CSS) */
 }
 #services-hero p { /* Selector específico para el h1 dentro de #services-hero */
-    
+    text-align: justify;
 }
 .services-grid {
     padding-top: 2%;
