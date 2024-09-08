@@ -121,15 +121,16 @@
       iframeContainer.style.display = 'none';
     });
 </script>
+<script>
+window.onbeforeunload = () => {
+    for(const form of document.getElementsByTagName('form')) {
+      form.reset();
+    }
+  }
+  </script>
 
 <script src="js/script.js">
-    function resetForm(form) {
-    // Pequeño retraso para permitir que Formspree procese el envío
-    setTimeout(function() {
-        form.reset(); 
-    }, 200); // Retraso de 100 milisegundos
-}
-
+   
 </script>
 <!--<script src="js/contacto.js"></script> *--->
 <a href="https://wa.me/5215555010689"  class="whatsapp-button" target="_blank"  title="Chatea con nosotros" alt="KLP HUMAN Logo">
