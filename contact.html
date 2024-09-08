@@ -46,16 +46,15 @@
             <div class="contact-image">
                 <img src="https://i.postimg.cc/zGv4y25X/contacto.jpg" alt="Imagen de contacto"> 
             </div>
-            <div class="contact-form-wrapper"> <form id="my-contact-form"> 
+            <div class="contact-form-wrapper"> 
+                <form  action="https://formspree.io/f/xeojdvlw" method="POST"> 
                     <div class="form-group">
-                        <h3>Rellena el formulario para contactarnos</h3>
+                        <h3>Contesta el formulario para contactarnos:</h3>
                         <label for="name">Nombre:</label>
                         <input type="text" id="name" name="name" required>
                     </div>
-                    <div class="form-group">   
-    
-                        <label for="email">Correo   
-     electrónico:</label>
+                    <div class="form-group"> 
+                        <label for="email">Correo electrónico:</label>
                         <input type="email" id="email" name="email" required>
                         <input type="text" name="website" id="website" style="display:none;">
                     </div>
@@ -63,9 +62,9 @@
                         <label for="message">Mensaje:</label>
                         <textarea id="message" name="message" required></textarea>
                     </div>
-                    <button type="submit"   
-     class="btn">Enviar Mensaje</button>
-                </form> </div>
+                    <button type="submit" class="btn">Enviar Mensaje</button>
+                </form> 
+            </div>
             <div class="contact-details" style="display: none;">
                 <h3>También puedes contactarnos a través de:</h3>
                 <p>Teléfono: <a href="https://wa.me/5215555010689">+52 1 55 5501 0689</a></p>
@@ -78,9 +77,10 @@
     <div class="footer-container">
         <div class="footer-columns"> 
             <div class="contact-info">
-                <h3><br><br><br><br>Contáctanos</h3>
-                <p>
-                    <i ></i>contacto@klphuman.com.mx
+                <h3>Contáctanos</h3>
+                <p  style="text-align: start;">
+                    <i ></i><a href="mailto:contacto@klphuman.com.mx" target="_blank">contacto@klphuman.com.mx</a><br>
+                    <i ></i><a href="https://wa.me/5215555010689">+52 1 55 5501 0689</a>
                 </p>
             </div>
             <div class="social-media">
@@ -108,7 +108,7 @@
     
     copyrightDiv.addEventListener('click', () => {
       // Ruta local al PDF
-      const pdfUrl = 'assets/pdf/AVISO DE PRIVACIDAD_KLP HUMAN (1).pdf'; 
+      const pdfUrl = 'https://drive.google.com/file/d/1YW6OISoT4BBmjsSR-iKzFz0NIu85ESxv/preview'; 
     
       googleIframe.src = pdfUrl;
       iframeContainer.style.display = 'flex'; 
@@ -122,8 +122,16 @@
     });
 </script>
 
-<script src="js/script.js"></script>
-<script src="js/contacto.js"></script> 
+<script src="js/script.js">
+    function resetForm(form) {
+    // Pequeño retraso para permitir que Formspree procese el envío
+    setTimeout(function() {
+        form.reset(); 
+    }, 200); // Retraso de 100 milisegundos
+}
+
+</script>
+<!--<script src="js/contacto.js"></script> *--->
 <a href="https://wa.me/5215555010689"  class="whatsapp-button" target="_blank"  title="Chatea con nosotros" alt="KLP HUMAN Logo">
     <i class="fab fa-whatsapp"></i>
     <span class="tooltiptext">Chatea con nosotros</span>
