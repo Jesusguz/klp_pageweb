@@ -664,6 +664,7 @@ textarea {
 }
 
 div.footer-container {
+     align-items: flex-start;
     display: flex;
     flex-direction: row;  /* Alinea los elementos horizontalmente en pantallas grandes */
     justify-content: space-between;
@@ -732,6 +733,16 @@ div.contact-info a  {
 }
 div.copyright{
     align-items: flex-start;
+   
+}
+div.copyright h3{
+    padding-bottom: 25px;
+    margin-bottom: 0px;
+}
+div.copyright p{
+    text-align: start;
+    margin-bottom: 0px;
+    margin-top: 0px;
 }
 
 /* ... (resto del código CSS sin cambios) ... */
