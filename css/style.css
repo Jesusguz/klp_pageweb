@@ -461,6 +461,7 @@ label {
 }
 
 input[type="text"],
+input[type="number"],
 input[type="email"],
 textarea {
     width: 100%;
@@ -546,6 +547,9 @@ textarea {
     max-width: 800px; /* Limita el ancho máximo para pantallas grandes */
 
 }
+.featured-content p {
+    text-align: justify;
+  }
 
 .featured-content h3,
 .value-proposition h3 {
@@ -693,11 +697,12 @@ div.footer-container {
 
     .footer-container > div {
         margin: 20px 0; 
+        flex-direction: column;
     }
 }
 
 .footer-container > div {
-    
+    align-items: flex-start;
     flex: 1; 
     margin: 0 0 0 100px; 
 }
@@ -717,7 +722,7 @@ div.contact-info  {
     text-align: start;
 }
 div.contact-info p  {
-    text-align: start;
+   
 }
 div.contact-info a  {
     text-align: start;
