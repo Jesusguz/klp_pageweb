@@ -730,6 +730,9 @@ div.contact-info a  {
 .contact-info i {
     margin-right: 15px;
 }
+div.copyright{
+    align-items: flex-start;
+}
 
 /* ... (resto del código CSS sin cambios) ... */
 .card {
