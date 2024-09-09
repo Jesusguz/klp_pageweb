@@ -680,11 +680,8 @@ div.footer-container {
 
 .footer-columns {
     width: 100%; /* Ocupa todo el ancho disponible dentro del contenedor */
-    justify-content: center; /* Centra los elementos horizontalmente */
+    justify-content: space-evenly; /* Centra los elementos horizontalmente */
     margin: 0;
-    margin-right: 50px;
-    margin-left: 50px;
-
     display: flex;
     align-items: center;
 }
@@ -732,7 +729,6 @@ div.contact-info a  {
     margin-right: 15px;
 }
 div.copyright{
-    padding-left: 50px;
     align-items: flex-start;
    
 }
