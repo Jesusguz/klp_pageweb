@@ -684,6 +684,7 @@ div.footer-container {
     margin: 0;
     display: flex;
     align-items: center;
+    text-align: left;
 }
 
 @media (max-width: 768px) { 
@@ -720,13 +721,13 @@ div.contact-info  {
     text-align: start;
 }
 div.contact-info p  {
-   
+    text-align: start;
 }
 div.contact-info a  {
     text-align: start;
 }
 .contact-info i {
-    margin-right: 15px;
+    
 }
 div.copyright{
     align-items: flex-start;
